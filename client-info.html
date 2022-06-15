@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- * favicon -->
+    <link rel="icon" href="assets/img/logo/favicon/favicon.ico" type="image/x-icon">
+    <!-- * fa -->
+    <link rel="stylesheet" href="assets/fonts/fa/css/font-awesome.min.css">
+    <!-- * bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- * styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- * page title -->
+    <title>Client information</title>
+</head>
+
+<body>
+    <div class="wrapper py-5 client-wrapper">
+        <!-- ? start header ? -->
+        <header class="header px-5">
+            <div class="container-fluid container-io header__container pb-3 border-bottom">
+                <div class="header__logo-container">
+                    <a href="#" class="header__logo w-100">
+                        <i class="svg-logo logo-icon"></i>
+                    </a>
+
+                    <button type="button" class="btn-burger burger-trigger" id="canvas-toggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <nav class="header__nav w-100">
+                    <div class="d-flex align-items-end header__nav-box">
+
+                        <a href="tel:+12012855165" class="header__link fs-4 header__tel">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span>+1201 2855165</span>
+                        </a>
+
+                        <a href="#" class="header__nav--btn fs-4">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-end">
+                        <a href="#" class="header__nav--btn fs-4">
+                            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" class="header__nav--btn fs-4">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="cart.html" class="header__nav--btn fs-4">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="client-info.html" class="header__nav--btn fs-4">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- ? end header ? -->
+
+        <!-- ? start main ?  -->
+        <main class="main">
+            <div class="container-fluid px-5 py-5 container-client-info">
+
+                <form method="" action="" class="row d-flex justify-content-evenly w-100 client-info"
+                    id="client-info-form">
+
+                    <!-- - client info header - -->
+                    <div class="client-info__header border-bottom d-flex justify-content-between">
+
+                        <h2 class="h2 text-nowrap m-0 d-flex align-items-center">My Profile</h2>
+
+                        <div class="client-info__header--buttons d-flex py-2 text-nowrap">
+                            <button type="submit" class="btn btn-primary me-3" id="save-changes" disabled>Save
+                                Changes</button>
+                            <button type="button" class="btn btn-primary" id="edit-client-info">Edit
+                                information</button>
+                        </div>
+
+                    </div>
+
+                    <!-- - client info personal - -->
+                    <div class="client-info__personal mt-4 border px-4 py-3 rounded shadow-sm client-info-content">
+
+                        <h4 class="h4 d-flex justify-content-between align-items-center client-info-manager">
+                            <span>Personal Details</span>
+                            <i class="fa fa-angle-down fs-4 me-3" aria-hidden="true"></i>
+                        </h4>
+
+                        <div class="row client-info-managed">
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">First Name <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2" autocomplete="off">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Last Name <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Job Title <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Contact Email <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <div class="input-group mt-2">
+                                    <span class="input-group-text border"><i class="fa fa-envelope-open-o"
+                                            aria-hidden="true"></i></span>
+                                    <input type="email" disabled class="form-control form-control-client-info"
+                                        placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Mobile Number <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="tel" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <div class="">
+                                    <span class="client-info__input-group--name">Password <i class="fa fa-pencil"
+                                            aria-hidden="true"></i></span>
+                                    <input type="password" name="" disabled
+                                        class="form-control form-control-client-info w-100 rounded mt-2"
+                                        autocomplete="off">
+                                </div>
+                                <div class="mt-3 change-password-item">
+                                    <span class="client-info__input-group--name">New Password <i class="fa fa-pencil"
+                                            aria-hidden="true"></i></span>
+                                    <input type="password" name="" disabled
+                                        class="form-control form-control-client-info w-100 rounded mt-2"
+                                        autocomplete="off">
+                                </div>
+                                <div class="mt-3 change-password-item">
+                                    <span class="client-info__input-group--name">Repeat New Password <i
+                                            class="fa fa-pencil" aria-hidden="true"></i></span>
+                                    <input type="password" name="" disabled
+                                        class="form-control form-control-client-info w-100 rounded mt-2"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4"></div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-3 d-flex justify-content-end">
+                                <button type="button" class="btn btn-secondary px-4" id="change-password"
+                                    disabled>Change Password</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- - client info company - -->
+                    <div class="client-info__company mt-4 border px-4 py-3 rounded shadow-sm client-info-content">
+
+                        <h4 class="h4 d-flex justify-content-between align-items-center client-info-manager">
+                            <span>Company Details</span>
+                            <i class="fa fa-angle-down fs-4 me-3" aria-hidden="true"></i>
+                        </h4>
+
+                        <div class="row client-info-managed">
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Company Name <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Business Tel <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="tel" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Address <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Contact Email <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <div class="input-group mt-2">
+                                    <span class="input-group-text border"><i class="fa fa-envelope-open-o"
+                                            aria-hidden="true"></i></span>
+                                    <input type="email" disabled class="form-control form-control-client-info"
+                                        placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">City <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Web Address <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">State / Province / Region <i
+                                        class="fa fa-pencil" aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 empty"></div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Country <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 empty"></div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Zip / Postal Code <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 empty"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- - client info shipping address - -->
+                    <div class="client-info__shipping mt-4 border px-4 py-3 rounded shadow-sm client-info-content" id="shipping-item">
+
+                        <h4 class="h4 d-flex justify-content-between align-items-center client-info-manager shipping-clone-parent">
+                            <span>Shipping Address</span>
+                            <i class="fa fa-angle-down fs-4 me-3" aria-hidden="true"></i>
+                        </h4>
+
+                        <div class="row client-info-managed">
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Company Name <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Attention To (Name) <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Contact Email <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <div class="input-group mt-2">
+                                    <span class="input-group-text border"><i class="fa fa-envelope-open-o"
+                                            aria-hidden="true"></i></span>
+                                    <input type="email" disabled class="form-control form-control-client-info"
+                                        placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Contact Number <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Address <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">City <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">State <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Zipcode / PIN <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+
+                            <div class="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6 mt-4 client-info__input-group">
+                                <span class="client-info__input-group--name">Country <i class="fa fa-pencil"
+                                        aria-hidden="true"></i></span>
+                                <input type="text" name="" disabled
+                                    class="form-control form-control-client-info w-100 rounded mt-2">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- - client info add shipping address - -->
+                    <div
+                        class="client-info__shipping-add mt-4 border p-4 py-3 rounded shadow-sm d-flex justify-content-end">
+                        <button type="button"
+                            class="btn btn-primary px-4 d-flex justify-content-center align-items-center"
+                            id="add-shipping-address">Add Shipping Address <i class="fa fa-plus ms-1"
+                                aria-hidden="true"></i></button>
+                    </div>
+
+                </form>
+
+            </div>
+        </main>
+        <!-- ? end main ?  -->
+
+        <!-- ? start canvas ?  -->
+        <nav class="canvas shadow container-io py-5 px-4" id="nav-canvas">
+
+            <div class="canvas__out"></div>
+
+            <ul class="canvas__list fs-5">
+                <!-- * dashbord * -->
+                <li class="canvas__li canvas__dashbord border-bottom pb-4">
+                    <div class="canvas__user">
+                        <a href="client-info.html">
+                            <i class="fa fa-user fs-3 text-primary"></i>
+                        </a>
+                    </div>
+                    <span class="canvas__text">Dashbord</span>
+                    <div class="canvas__dashbord--btns">
+                        <a href="#" class="canvas__dashbord--btn"><i class="fa fa-bell" aria-hidden="true"></i></a>
+                        <a href="#" class="canvas__dashbord--btn"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <button type="button" class="exit-canvas burger-trigger" id="exit-canvas"></button>
+                    </div>
+                </li>
+
+                <li class="canvas__li canvas__drop-box">
+                    <div class="d-flex align-items-center w-100 canvas__element canvas__drop-list--trigger">
+                        <i class="fa fa-filter me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Diamonds</span>
+                        <i class="fa fa-angle-down canvas__text " aria-hidden="true"></i>
+                    </div>
+
+                    <ul class="canvas__drop-list canvas__drop-list--target">
+                        <li class="canvas__drop-li canvas__element">
+                            <a href="index.html" class="canvas__link">
+                                <i class="fa fa-diamond me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                                <span class="canvas__text canvas__item">White Diamonds</span>
+                            </a>
+                        </li>
+
+                        <li class="canvas__drop-li canvas__element">
+                            <a href="index.html" class="canvas__link">
+                                <i class="fa fa-diamond me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                                <span class="canvas__text canvas__item">Colored Diamond</span>
+                            </a>
+                        </li>
+
+                        <li class="canvas__drop-li canvas__element">
+                            <a href="index.html" class="canvas__link">
+                                <i class="fa fa-diamond me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                                <span class="canvas__text canvas__item">Melee</span>
+                            </a>
+                        </li>
+
+                        <li class="canvas__drop-li canvas__element">
+                            <a href="index.html" class="canvas__link">
+                                <i class="fa fa-diamond me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                                <span class="canvas__text canvas__item">Other Diamond</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="#" class="canvas__link in-dev-toggler">
+                        <i class="fa fa-magic me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Custom Order</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="#" class="canvas__link in-dev-toggler">
+                        <i class="fa fa-file me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Hold List</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="#" class="canvas__link in-dev-toggler">
+                        <i class="fa fa-credit-card me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Payment Methods</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="client-info.html" class="canvas__link">
+                        <i class="fa fa-book me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Client Information</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="#" class="canvas__link in-dev-toggler">
+                        <i class="fa fa-comments me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Chat</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="#" class="canvas__link in-dev-toggler">
+                        <i class="fa fa-handshake-o me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Sale</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="orders.html" class="canvas__link">
+                        <i class="fa fa-book me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Orders</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <!-- ? end canvas ?  -->
+
+        <!-- ? start in development-->
+        <div class="in-dev" id="in-dev">
+            <div class="in-dev__body">
+                <!-- in dev logo svg -->
+                <div class="in-dev__logo">
+                    <img src="assets/img/logo/Second -LaBrilliante Fold type sign L _ B  (Print).svg" alt="logo">
+                </div>
+
+                <!-- in dev text info -->
+                <div class="in-dev__title">
+                    <h2 class="h2">Page in development</h2>
+                </div>
+            </div>
+        </div>
+        <!-- ? end  in development-->
+    </div>
+
+    <!-- ! ------ scripts------ ! -->
+
+    <!-- * element control -->
+    <script src="assets/js/scripts/element-control.js"></script>
+    <!-- * client info -->
+    <script src="assets/js/scripts/clientInfo.js"></script>
+    <!-- * canvas -->
+    <script src="assets/js/scripts/canvas.js"></script>
+    <!-- * in dev -->
+    <script src="assets/js/scripts/in-dev.js"></script>
+</body>
+
+</html>

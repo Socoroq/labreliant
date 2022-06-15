@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- * favicon -->
+    <link rel="icon" href="assets/img/logo/favicon/favicon.ico" type="image/x-icon">
+    <!-- * fa -->
+    <link rel="stylesheet" href="assets/fonts/fa/css/font-awesome.min.css">
+    <!-- * bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- * noUISlider -->
+    <link rel="stylesheet" href="assets/css/nouiSlider.min.css">
+    <!-- * styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- * page title -->
+    <title>Lab Grown Diamonds</title>
+</head>
+
+<body>
+    <!-- ? page wrapper -->
+    <div class="wrapper cart-wrapper min-vh-100">
+
+        <!-- ? start header ? -->
+        <header class="header px-5">
+            <div class="container-fluid container-io header__container pb-3 border-bottom">
+                <div class="header__logo-container">
+                    <a href="#" class="header__logo w-100">
+                        <i class="svg-logo logo-icon"></i>
+                    </a>
+
+                    <button type="button" class="btn-burger burger-trigger" id="canvas-toggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <nav class="header__nav w-100">
+                    <div class="d-flex align-items-end header__nav-box">
+
+                        <a href="tel:+12012855165" class="header__link fs-4 header__tel">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span>+1201 2855165</span>
+                        </a>
+
+                        <a href="#" class="header__nav--btn fs-4">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-end">
+                        <a href="#" class="header__nav--btn fs-4">
+                            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" class="header__nav--btn fs-4">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="cart.html" class="header__nav--btn fs-4">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="client-info.html" class="header__nav--btn fs-4">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- ? end header ? -->
+
+        <!-- ? start diamond item ? -->
+        <div class="container-fluid mt-5 cart-container">
+            <h2 class="h2 px-2 py-3">Shopping Bag <i class="fa fa-shopping-bag ms-2 text-primary"></i></h2>
+            <!-- content sections -->
+            <div class="content tab-content cart-content">
+
+                <div class="cart-panel shadow-sm border">
+
+                    <div class="cart-panel__info px-2 py-4">
+                        <div class="cart-panel__info-item">
+                            <span class="cart-panel__info-name">Total Stone</span>
+                            <span class="cart-panel__info-place">4</span>
+                        </div>
+                        <div class="cart-panel__info-item">
+                            <span class="cart-panel__info-name">Total Carat</span>
+                            <span class="cart-panel__info-place">12.91</span>
+                        </div>
+                        <div class="cart-panel__info-item">
+                            <span class="cart-panel__info-name">Total net payable</span>
+                            <span class="cart-panel__info-place">$200000</span>
+                        </div>
+                    </div>
+
+                    <div class="cart-panel__buttons px-2 py-4 row">
+
+                        <div class="cart-button col-3">
+                            <button type="button" class="btn btn-danger w-100" id="delete-selected">Delete
+                                Selected</button>
+                        </div>
+
+                        <div class="cart-button col-3">
+                            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#buy-modal">Buy</button>
+                        </div>
+
+                        <div class="cart-button col-3">
+                            <button type="button" class="btn btn-secondary w-100" data-bs-toggle="modal"
+                                data-bs-target="#memo-modal">Memo</button>
+                        </div>
+
+                        <div class="cart-button col-3">
+                            <button type="button" class="btn btn-secondary w-100" data-bs-toggle="modal"
+                                data-bs-target="#hold-modal">Hold</button>
+                        </div>
+
+                        <div class="cart-button col-12 mt-3">
+                            <button type="button" class="btn btn-primary w-100">Send link to wish list to
+                                Manager</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- - start cart - -->
+                <section class="result fade show pb-5 active">
+
+                    <!-- content info list start -->
+                    <div class="content-name">
+                        <!-- content name list -->
+                        <ul class="item-list-name pe-0" id="result-simple-sort">
+                            <li class="params-filter--item-quick">
+                                <span>Quick result</span>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="hide">
+                                <div class="d-flex align-items-center">
+                                    <span class="d-none sort-trigger">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </span>
+                                    <span></span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    <i class="d-none fa fa-bars" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="hide">
+                                <div class="d-flex align-items-center">
+                                    <span class="d-none sort-trigger">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </span>
+                                    <span>Shape</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    <i class="d-none fa fa-bars" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="show"
+                                data-io-simple-sort="disc">
+                                <span>Disc%</span>
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </li>
+                            <li class="params-filter--item params-filter--sort active-2" data-io-sort="show"
+                                data-io-simple-sort="price">
+                                <span>Price</span>
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="show"
+                                data-io-simple-sort="carat">
+                                <span>Carat</span>
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="hide">
+                                <div class="d-flex align-items-center">
+                                    <span class="d-none sort-trigger">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </span>
+                                    <span>Cut</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    <i class="d-none fa fa-bars" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="hide">
+                                <div class="d-flex align-items-center">
+                                    <span class="d-none sort-trigger">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </span>
+                                    <span>Color</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    <i class="d-none fa fa-bars" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="hide">
+                                <div class="d-flex align-items-center">
+                                    <span class="d-none sort-trigger">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </span>
+                                    <span>Clarity</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    <i class="d-none fa fa-bars" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="hide">
+                                <div class="d-flex align-items-center">
+                                    <span class="d-none sort-trigger">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </span>
+                                    <span>T%</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    <i class="d-none fa fa-bars" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="hide">
+                                <div class="d-flex align-items-center">
+                                    <span class="d-none sort-trigger">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </span>
+                                    <span>D%</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    <i class="d-none fa fa-bars" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="show"
+                                data-io-simple-sort="lw">
+                                <span>L/W</span>
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </li>
+                            <li class="params-filter--item params-filter--sort" data-io-sort="hide">
+                                <div class="d-flex align-items-center">
+                                    <span class="d-none sort-trigger">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </span>
+                                    <span>Report</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    <i class="d-none fa fa-bars" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li class="params-filter--item-quick">
+                                <div class="d-flex align-items-center">
+                                    <span>Delete</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- modal toggler -->
+                        <div class="sort-modal-toggler me-4">
+                            <button type="button" class="btn-sort px-2 py-1" data-io-sort="toggle-modal"
+                                data-bs-target="#result-name--modal" data-bs-toggle="modal">
+                                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <!-- modal window -->
+                        <div class="modal fade" id="result-name--modal" tabindex="-1"
+                            aria-labelledby="result-sort-label" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header border-bottom">
+                                        <h5 class="modal-title">Result Sort</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="">
+                                            <h6 class="h6 py-2 px-3 io-bg-dark rounded text-white">Drag to set priority
+                                            </h6>
+                                            <ul class="list result-name__modal-list" id="result-name-priority">
+                                                <li class="modal-sort-item active-2" data-io-simple-sort="price">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">Price</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <h6 class="h6 py-2 px-3 io-bg-dark rounded text-white">Sort by</h6>
+                                            <ul class="list result-name__modal-list" id="result-name-sort">
+                                                <li class="modal-sort-item">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">Compare</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">Shape</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item" data-io-simple-sort="disc">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">Disc%</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item" data-io-simple-sort="carat">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">Carat</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">Cut</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">Color</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">Clarity</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">T%</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">D%</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item" data-io-simple-sort="lw">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">L/W</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">Report</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                                <li class="modal-sort-item">
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ms-2">Measurements</span>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <i class="fa fa-angle-down me-2"></i>
+                                                        <i class="fa fa-bars drag-handle"></i>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer border-top">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Sort</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- content info list end -->
+
+                    <!-- result items -->
+                    <div class="result__items border shadow rounded-bottom pe-2" id="cart-items">
+
+                        <div class="result__item result-section--element" data-io-diamond="result"
+                            data-io-copy="to-comparison">
+                            <ul class="item-list result__item-list">
+                                <li class="item-list-element">
+                                    <i class="item-shape svg-round"></i>
+                                    <i class="fa fa-video-camera ms-2" aria-hidden="true"></i>
+                                    <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                </li>
+                                <li class="item-list-element">
+                                    <div class="checkbox-label label-result" data-io-label="diamonds">
+                                        <input type="checkbox" name="" id="" class="d-none checkbox checkbox-result">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="me-2">Shape:</span>
+                                    <span>Round</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Disc%:</span>
+                                    <span>5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Price:</span>
+                                    <span>$300</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Carat:</span>
+                                    <span>0.30</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Cut:</span>
+                                    <span>Good</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Color:</span>
+                                    <span>H</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Clarity:</span>
+                                    <span>VS2</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">T%:</span>
+                                    <span>57.5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">D%:</span>
+                                    <span>64%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">L/W:</span>
+                                    <span>1.56</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Report:</span>
+                                    <span>IGI</span>
+                                </li>
+                                <li class="item-list-element item-list-element-delete">
+                                    <button type="button" class="btn-delete rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="result__drop-down border-top">
+                                <div class="row">
+                                    <div class="result__drop-down--col col-3">
+                                        <img src="assets/img/2.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="result__drop-down--col col-7">
+
+                                        <h4 class="h4 py-2">0.30 Carat Pear Lab Diamond</h4>
+
+                                        <h5 class="h5 py-2">$290</h5>
+
+                                        <ul class="list result__info-list">
+
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Carat: 0.30</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Color: H</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Clarity: VS2</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Cut: Good</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Polish: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Symmetry: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Table: 57.5%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Depth: 64%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>L/W: 1.56</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Measurements: 5.69 x 3.64 x 2.33</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="acordion">
+                                            <button type="button" class="acordion__btn btn-more--info">
+                                                Additional Details
+                                                <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="acordion__body body-more--info border-top w-100">
+                                                <ul class="list result__drop-list">
+                                                    <li class="result__drop-li">
+                                                        <span>Culet: Pointed</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Gridle: Thick - Very Thick</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Report №: LG1234567</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Fluour: None</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Origin: Lab Created</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span class="d-flex w-100 flex-column">
+                                                            <span>Lab Created Diamond Delivery:</span>
+                                                            <span class="text-nowrap">Monday, March 21</span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="result__drop-down--col col-2 d-flex flex-column justify-content-center align-items-center">
+                                        <button type="button" class="btn btn-primary-border py-3 w-100 text-capitalize">
+                                            View Diamond
+                                        </button>
+                                        <p class="mt-3 w-100 d-flex justify-content-center">
+                                            <i class="fa fa-heart me-2 text-primary" aria-hidden="true"></i>
+                                            <span>Only One Available</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="result__item result-section--element" data-io-diamond="result"
+                            data-io-copy="to-comparison">
+                            <ul class="item-list result__item-list">
+                                <li class="item-list-element">
+                                    <i class="item-shape svg-round"></i>
+                                    <i class="fa fa-video-camera ms-2" aria-hidden="true"></i>
+                                    <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                </li>
+                                <li class="item-list-element">
+                                    <div class="checkbox-label label-result" data-io-label="diamonds">
+                                        <input type="checkbox" name="" id="" class="d-none checkbox checkbox-result">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="me-2">Shape:</span>
+                                    <span>Round</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Disc%:</span>
+                                    <span>5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Price:</span>
+                                    <span>$300</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Carat:</span>
+                                    <span>0.30</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Cut:</span>
+                                    <span>Good</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Color:</span>
+                                    <span>H</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Clarity:</span>
+                                    <span>VS2</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">T%:</span>
+                                    <span>57.5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">D%:</span>
+                                    <span>64%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">L/W:</span>
+                                    <span>1.56</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Report:</span>
+                                    <span>IGI</span>
+                                </li>
+                                <li class="item-list-element item-list-element-delete">
+                                    <button type="button" class="btn-delete rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="result__drop-down border-top">
+                                <div class="row">
+                                    <div class="result__drop-down--col col-3">
+                                        <img src="assets/img/2.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="result__drop-down--col col-7">
+
+                                        <h4 class="h4 py-2">0.30 Carat Pear Lab Diamond</h4>
+
+                                        <h5 class="h5 py-2">$290</h5>
+
+                                        <ul class="list result__info-list">
+
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Carat: 0.30</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Color: H</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Clarity: VS2</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Cut: Good</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Polish: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Symmetry: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Table: 57.5%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Depth: 64%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>L/W: 1.56</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Measurements: 5.69 x 3.64 x 2.33</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="acordion">
+                                            <button type="button" class="acordion__btn btn-more--info">
+                                                Additional Details
+                                                <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="acordion__body body-more--info border-top w-100">
+                                                <ul class="list result__drop-list">
+                                                    <li class="result__drop-li">
+                                                        <span>Culet: Pointed</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Gridle: Thick - Very Thick</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Report №: LG1234567</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Fluour: None</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Origin: Lab Created</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span class="d-flex w-100 flex-column">
+                                                            <span>Lab Created Diamond Delivery:</span>
+                                                            <span class="text-nowrap">Monday, March 21</span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="result__drop-down--col col-2 d-flex flex-column justify-content-center align-items-center">
+                                        <button type="button" class="btn btn-primary-border py-3 w-100 text-capitalize">
+                                            View Diamond
+                                        </button>
+                                        <p class="mt-3 w-100 d-flex justify-content-center">
+                                            <i class="fa fa-heart me-2 text-primary" aria-hidden="true"></i>
+                                            <span>Only One Available</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="result__item result-section--element" data-io-diamond="result"
+                            data-io-copy="to-comparison">
+                            <ul class="item-list result__item-list">
+                                <li class="item-list-element">
+                                    <i class="item-shape svg-round"></i>
+                                    <i class="fa fa-video-camera ms-2" aria-hidden="true"></i>
+                                    <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                </li>
+                                <li class="item-list-element">
+                                    <div class="checkbox-label label-result" data-io-label="diamonds">
+                                        <input type="checkbox" name="" id="" class="d-none checkbox checkbox-result">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="me-2">Shape:</span>
+                                    <span>Round</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Disc%:</span>
+                                    <span>5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Price:</span>
+                                    <span>$300</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Carat:</span>
+                                    <span>0.30</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Cut:</span>
+                                    <span>Good</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Color:</span>
+                                    <span>H</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Clarity:</span>
+                                    <span>VS2</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">T%:</span>
+                                    <span>57.5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">D%:</span>
+                                    <span>64%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">L/W:</span>
+                                    <span>1.56</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Report:</span>
+                                    <span>IGI</span>
+                                </li>
+                                <li class="item-list-element item-list-element-delete">
+                                    <button type="button" class="btn-delete rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="result__drop-down border-top">
+                                <div class="row">
+                                    <div class="result__drop-down--col col-3">
+                                        <img src="assets/img/2.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="result__drop-down--col col-7">
+
+                                        <h4 class="h4 py-2">0.30 Carat Pear Lab Diamond</h4>
+
+                                        <h5 class="h5 py-2">$290</h5>
+
+                                        <ul class="list result__info-list">
+
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Carat: 0.30</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Color: H</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Clarity: VS2</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Cut: Good</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Polish: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Symmetry: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Table: 57.5%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Depth: 64%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>L/W: 1.56</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Measurements: 5.69 x 3.64 x 2.33</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="acordion">
+                                            <button type="button" class="acordion__btn btn-more--info">
+                                                Additional Details
+                                                <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="acordion__body body-more--info border-top w-100">
+                                                <ul class="list result__drop-list">
+                                                    <li class="result__drop-li">
+                                                        <span>Culet: Pointed</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Gridle: Thick - Very Thick</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Report №: LG1234567</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Fluour: None</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Origin: Lab Created</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span class="d-flex w-100 flex-column">
+                                                            <span>Lab Created Diamond Delivery:</span>
+                                                            <span class="text-nowrap">Monday, March 21</span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="result__drop-down--col col-2 d-flex flex-column justify-content-center align-items-center">
+                                        <button type="button" class="btn btn-primary-border py-3 w-100 text-capitalize">
+                                            View Diamond
+                                        </button>
+                                        <p class="mt-3 w-100 d-flex justify-content-center">
+                                            <i class="fa fa-heart me-2 text-primary" aria-hidden="true"></i>
+                                            <span>Only One Available</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="result__item result-section--element" data-io-diamond="result"
+                            data-io-copy="to-comparison">
+                            <ul class="item-list result__item-list">
+                                <li class="item-list-element">
+                                    <i class="item-shape svg-round"></i>
+                                    <i class="fa fa-video-camera ms-2" aria-hidden="true"></i>
+                                    <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                </li>
+                                <li class="item-list-element">
+                                    <div class="checkbox-label label-result" data-io-label="diamonds">
+                                        <input type="checkbox" name="" id="" class="d-none checkbox checkbox-result">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="me-2">Shape:</span>
+                                    <span>Round</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Disc%:</span>
+                                    <span>5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Price:</span>
+                                    <span>$300</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Carat:</span>
+                                    <span>0.30</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Cut:</span>
+                                    <span>Good</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Color:</span>
+                                    <span>H</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Clarity:</span>
+                                    <span>VS2</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">T%:</span>
+                                    <span>57.5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">D%:</span>
+                                    <span>64%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">L/W:</span>
+                                    <span>1.56</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Report:</span>
+                                    <span>IGI</span>
+                                </li>
+                                <li class="item-list-element item-list-element-delete">
+                                    <button type="button" class="btn-delete rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="result__drop-down border-top">
+                                <div class="row">
+                                    <div class="result__drop-down--col col-3">
+                                        <img src="assets/img/2.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="result__drop-down--col col-7">
+
+                                        <h4 class="h4 py-2">0.30 Carat Pear Lab Diamond</h4>
+
+                                        <h5 class="h5 py-2">$290</h5>
+
+                                        <ul class="list result__info-list">
+
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Carat: 0.30</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Color: H</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Clarity: VS2</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Cut: Good</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Polish: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Symmetry: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Table: 57.5%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Depth: 64%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>L/W: 1.56</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Measurements: 5.69 x 3.64 x 2.33</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="acordion">
+                                            <button type="button" class="acordion__btn btn-more--info">
+                                                Additional Details
+                                                <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="acordion__body body-more--info border-top w-100">
+                                                <ul class="list result__drop-list">
+                                                    <li class="result__drop-li">
+                                                        <span>Culet: Pointed</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Gridle: Thick - Very Thick</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Report №: LG1234567</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Fluour: None</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Origin: Lab Created</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span class="d-flex w-100 flex-column">
+                                                            <span>Lab Created Diamond Delivery:</span>
+                                                            <span class="text-nowrap">Monday, March 21</span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="result__drop-down--col col-2 d-flex flex-column justify-content-center align-items-center">
+                                        <button type="button" class="btn btn-primary-border py-3 w-100 text-capitalize">
+                                            View Diamond
+                                        </button>
+                                        <p class="mt-3 w-100 d-flex justify-content-center">
+                                            <i class="fa fa-heart me-2 text-primary" aria-hidden="true"></i>
+                                            <span>Only One Available</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="result__item result-section--element" data-io-diamond="result"
+                            data-io-copy="to-comparison">
+                            <ul class="item-list result__item-list">
+                                <li class="item-list-element">
+                                    <i class="item-shape svg-round"></i>
+                                    <i class="fa fa-video-camera ms-2" aria-hidden="true"></i>
+                                    <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                </li>
+                                <li class="item-list-element">
+                                    <div class="checkbox-label label-result" data-io-label="diamonds">
+                                        <input type="checkbox" name="" id="" class="d-none checkbox checkbox-result">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="me-2">Shape:</span>
+                                    <span>Round</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Disc%:</span>
+                                    <span>5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Price:</span>
+                                    <span>$300</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Carat:</span>
+                                    <span>0.30</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Cut:</span>
+                                    <span>Good</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Color:</span>
+                                    <span>H</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Clarity:</span>
+                                    <span>VS2</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">T%:</span>
+                                    <span>57.5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">D%:</span>
+                                    <span>64%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">L/W:</span>
+                                    <span>1.56</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Report:</span>
+                                    <span>IGI</span>
+                                </li>
+                                <li class="item-list-element item-list-element-delete">
+                                    <button type="button" class="btn-delete rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="result__drop-down border-top">
+                                <div class="row">
+                                    <div class="result__drop-down--col col-3">
+                                        <img src="assets/img/2.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="result__drop-down--col col-7">
+
+                                        <h4 class="h4 py-2">0.30 Carat Pear Lab Diamond</h4>
+
+                                        <h5 class="h5 py-2">$290</h5>
+
+                                        <ul class="list result__info-list">
+
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Carat: 0.30</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Color: H</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Clarity: VS2</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Cut: Good</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Polish: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Symmetry: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Table: 57.5%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Depth: 64%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>L/W: 1.56</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Measurements: 5.69 x 3.64 x 2.33</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="acordion">
+                                            <button type="button" class="acordion__btn btn-more--info">
+                                                Additional Details
+                                                <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="acordion__body body-more--info border-top w-100">
+                                                <ul class="list result__drop-list">
+                                                    <li class="result__drop-li">
+                                                        <span>Culet: Pointed</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Gridle: Thick - Very Thick</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Report №: LG1234567</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Fluour: None</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Origin: Lab Created</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span class="d-flex w-100 flex-column">
+                                                            <span>Lab Created Diamond Delivery:</span>
+                                                            <span class="text-nowrap">Monday, March 21</span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="result__drop-down--col col-2 d-flex flex-column justify-content-center align-items-center">
+                                        <button type="button" class="btn btn-primary-border py-3 w-100 text-capitalize">
+                                            View Diamond
+                                        </button>
+                                        <p class="mt-3 w-100 d-flex justify-content-center">
+                                            <i class="fa fa-heart me-2 text-primary" aria-hidden="true"></i>
+                                            <span>Only One Available</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="result__item result-section--element" data-io-diamond="result"
+                            data-io-copy="to-comparison">
+                            <ul class="item-list result__item-list">
+                                <li class="item-list-element">
+                                    <i class="item-shape svg-round"></i>
+                                    <i class="fa fa-video-camera ms-2" aria-hidden="true"></i>
+                                    <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                </li>
+                                <li class="item-list-element">
+                                    <div class="checkbox-label label-result" data-io-label="diamonds">
+                                        <input type="checkbox" name="" id="" class="d-none checkbox checkbox-result">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="me-2">Shape:</span>
+                                    <span>Round</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Disc%:</span>
+                                    <span>5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Price:</span>
+                                    <span>$300</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Carat:</span>
+                                    <span>0.30</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Cut:</span>
+                                    <span>Good</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Color:</span>
+                                    <span>H</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Clarity:</span>
+                                    <span>VS2</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">T%:</span>
+                                    <span>57.5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">D%:</span>
+                                    <span>64%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">L/W:</span>
+                                    <span>1.56</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Report:</span>
+                                    <span>IGI</span>
+                                </li>
+                                <li class="item-list-element item-list-element-delete">
+                                    <button type="button" class="btn-delete rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="result__drop-down border-top">
+                                <div class="row">
+                                    <div class="result__drop-down--col col-3">
+                                        <img src="assets/img/2.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="result__drop-down--col col-7">
+
+                                        <h4 class="h4 py-2">0.30 Carat Pear Lab Diamond</h4>
+
+                                        <h5 class="h5 py-2">$290</h5>
+
+                                        <ul class="list result__info-list">
+
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Carat: 0.30</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Color: H</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Clarity: VS2</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Cut: Good</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Polish: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Symmetry: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Table: 57.5%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Depth: 64%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>L/W: 1.56</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Measurements: 5.69 x 3.64 x 2.33</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="acordion">
+                                            <button type="button" class="acordion__btn btn-more--info">
+                                                Additional Details
+                                                <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="acordion__body body-more--info border-top w-100">
+                                                <ul class="list result__drop-list">
+                                                    <li class="result__drop-li">
+                                                        <span>Culet: Pointed</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Gridle: Thick - Very Thick</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Report №: LG1234567</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Fluour: None</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Origin: Lab Created</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span class="d-flex w-100 flex-column">
+                                                            <span>Lab Created Diamond Delivery:</span>
+                                                            <span class="text-nowrap">Monday, March 21</span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="result__drop-down--col col-2 d-flex flex-column justify-content-center align-items-center">
+                                        <button type="button" class="btn btn-primary-border py-3 w-100 text-capitalize">
+                                            View Diamond
+                                        </button>
+                                        <p class="mt-3 w-100 d-flex justify-content-center">
+                                            <i class="fa fa-heart me-2 text-primary" aria-hidden="true"></i>
+                                            <span>Only One Available</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="result__item result-section--element" data-io-diamond="result"
+                            data-io-copy="to-comparison">
+                            <ul class="item-list result__item-list">
+                                <li class="item-list-element">
+                                    <i class="item-shape svg-round"></i>
+                                    <i class="fa fa-video-camera ms-2" aria-hidden="true"></i>
+                                    <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                </li>
+                                <li class="item-list-element">
+                                    <div class="checkbox-label label-result" data-io-label="diamonds">
+                                        <input type="checkbox" name="" id="" class="d-none checkbox checkbox-result">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="me-2">Shape:</span>
+                                    <span>Round</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Disc%:</span>
+                                    <span>5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Price:</span>
+                                    <span>$300</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Carat:</span>
+                                    <span>0.30</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Cut:</span>
+                                    <span>Good</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Color:</span>
+                                    <span>H</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Clarity:</span>
+                                    <span>VS2</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">T%:</span>
+                                    <span>57.5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">D%:</span>
+                                    <span>64%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">L/W:</span>
+                                    <span>1.56</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Report:</span>
+                                    <span>IGI</span>
+                                </li>
+                                <li class="item-list-element item-list-element-delete">
+                                    <button type="button" class="btn-delete rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="result__drop-down border-top">
+                                <div class="row">
+                                    <div class="result__drop-down--col col-3">
+                                        <img src="assets/img/2.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="result__drop-down--col col-7">
+
+                                        <h4 class="h4 py-2">0.30 Carat Pear Lab Diamond</h4>
+
+                                        <h5 class="h5 py-2">$290</h5>
+
+                                        <ul class="list result__info-list">
+
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Carat: 0.30</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Color: H</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Clarity: VS2</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Cut: Good</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Polish: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Symmetry: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Table: 57.5%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Depth: 64%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>L/W: 1.56</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Measurements: 5.69 x 3.64 x 2.33</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="acordion">
+                                            <button type="button" class="acordion__btn btn-more--info">
+                                                Additional Details
+                                                <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="acordion__body body-more--info border-top w-100">
+                                                <ul class="list result__drop-list">
+                                                    <li class="result__drop-li">
+                                                        <span>Culet: Pointed</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Gridle: Thick - Very Thick</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Report №: LG1234567</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Fluour: None</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Origin: Lab Created</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span class="d-flex w-100 flex-column">
+                                                            <span>Lab Created Diamond Delivery:</span>
+                                                            <span class="text-nowrap">Monday, March 21</span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="result__drop-down--col col-2 d-flex flex-column justify-content-center align-items-center">
+                                        <button type="button" class="btn btn-primary-border py-3 w-100 text-capitalize">
+                                            View Diamond
+                                        </button>
+                                        <p class="mt-3 w-100 d-flex justify-content-center">
+                                            <i class="fa fa-heart me-2 text-primary" aria-hidden="true"></i>
+                                            <span>Only One Available</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="result__item result-section--element" data-io-diamond="result"
+                            data-io-copy="to-comparison">
+                            <ul class="item-list result__item-list">
+                                <li class="item-list-element">
+                                    <i class="item-shape svg-round"></i>
+                                    <i class="fa fa-video-camera ms-2" aria-hidden="true"></i>
+                                    <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                </li>
+                                <li class="item-list-element">
+                                    <div class="checkbox-label label-result" data-io-label="diamonds">
+                                        <input type="checkbox" name="" id="" class="d-none checkbox checkbox-result">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="me-2">Shape:</span>
+                                    <span>Round</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Disc%:</span>
+                                    <span>5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Price:</span>
+                                    <span>$300</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Carat:</span>
+                                    <span>0.30</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Cut:</span>
+                                    <span>Good</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Color:</span>
+                                    <span>H</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Clarity:</span>
+                                    <span>VS2</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">T%:</span>
+                                    <span>57.5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">D%:</span>
+                                    <span>64%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">L/W:</span>
+                                    <span>1.56</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Report:</span>
+                                    <span>IGI</span>
+                                </li>
+                                <li class="item-list-element item-list-element-delete">
+                                    <button type="button" class="btn-delete rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="result__drop-down border-top">
+                                <div class="row">
+                                    <div class="result__drop-down--col col-3">
+                                        <img src="assets/img/2.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="result__drop-down--col col-7">
+
+                                        <h4 class="h4 py-2">0.30 Carat Pear Lab Diamond</h4>
+
+                                        <h5 class="h5 py-2">$290</h5>
+
+                                        <ul class="list result__info-list">
+
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Carat: 0.30</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Color: H</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Clarity: VS2</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Cut: Good</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Polish: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Symmetry: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Table: 57.5%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Depth: 64%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>L/W: 1.56</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Measurements: 5.69 x 3.64 x 2.33</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="acordion">
+                                            <button type="button" class="acordion__btn btn-more--info">
+                                                Additional Details
+                                                <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="acordion__body body-more--info border-top w-100">
+                                                <ul class="list result__drop-list">
+                                                    <li class="result__drop-li">
+                                                        <span>Culet: Pointed</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Gridle: Thick - Very Thick</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Report №: LG1234567</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Fluour: None</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Origin: Lab Created</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span class="d-flex w-100 flex-column">
+                                                            <span>Lab Created Diamond Delivery:</span>
+                                                            <span class="text-nowrap">Monday, March 21</span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="result__drop-down--col col-2 d-flex flex-column justify-content-center align-items-center">
+                                        <button type="button" class="btn btn-primary-border py-3 w-100 text-capitalize">
+                                            View Diamond
+                                        </button>
+                                        <p class="mt-3 w-100 d-flex justify-content-center">
+                                            <i class="fa fa-heart me-2 text-primary" aria-hidden="true"></i>
+                                            <span>Only One Available</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="result__item result-section--element" data-io-diamond="result"
+                            data-io-copy="to-comparison">
+                            <ul class="item-list result__item-list">
+                                <li class="item-list-element">
+                                    <i class="item-shape svg-round"></i>
+                                    <i class="fa fa-video-camera ms-2" aria-hidden="true"></i>
+                                    <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                </li>
+                                <li class="item-list-element">
+                                    <div class="checkbox-label label-result" data-io-label="diamonds">
+                                        <input type="checkbox" name="" id="" class="d-none checkbox checkbox-result">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="me-2">Shape:</span>
+                                    <span>Round</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Disc%:</span>
+                                    <span>5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Price:</span>
+                                    <span>$300</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Carat:</span>
+                                    <span>0.30</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Cut:</span>
+                                    <span>Good</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Color:</span>
+                                    <span>H</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Clarity:</span>
+                                    <span>VS2</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">T%:</span>
+                                    <span>57.5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">D%:</span>
+                                    <span>64%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">L/W:</span>
+                                    <span>1.56</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Report:</span>
+                                    <span>IGI</span>
+                                </li>
+                                <li class="item-list-element item-list-element-delete">
+                                    <button type="button" class="btn-delete rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="result__drop-down border-top">
+                                <div class="row">
+                                    <div class="result__drop-down--col col-3">
+                                        <img src="assets/img/2.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="result__drop-down--col col-7">
+
+                                        <h4 class="h4 py-2">0.30 Carat Pear Lab Diamond</h4>
+
+                                        <h5 class="h5 py-2">$290</h5>
+
+                                        <ul class="list result__info-list">
+
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Carat: 0.30</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Color: H</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Clarity: VS2</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Cut: Good</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Polish: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Symmetry: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Table: 57.5%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Depth: 64%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>L/W: 1.56</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Measurements: 5.69 x 3.64 x 2.33</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="acordion">
+                                            <button type="button" class="acordion__btn btn-more--info">
+                                                Additional Details
+                                                <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="acordion__body body-more--info border-top w-100">
+                                                <ul class="list result__drop-list">
+                                                    <li class="result__drop-li">
+                                                        <span>Culet: Pointed</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Gridle: Thick - Very Thick</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Report №: LG1234567</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Fluour: None</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Origin: Lab Created</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span class="d-flex w-100 flex-column">
+                                                            <span>Lab Created Diamond Delivery:</span>
+                                                            <span class="text-nowrap">Monday, March 21</span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="result__drop-down--col col-2 d-flex flex-column justify-content-center align-items-center">
+                                        <button type="button" class="btn btn-primary-border py-3 w-100 text-capitalize">
+                                            View Diamond
+                                        </button>
+                                        <p class="mt-3 w-100 d-flex justify-content-center">
+                                            <i class="fa fa-heart me-2 text-primary" aria-hidden="true"></i>
+                                            <span>Only One Available</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="result__item result-section--element" data-io-diamond="result"
+                            data-io-copy="to-comparison">
+                            <ul class="item-list result__item-list">
+                                <li class="item-list-element">
+                                    <i class="item-shape svg-round"></i>
+                                    <i class="fa fa-video-camera ms-2" aria-hidden="true"></i>
+                                    <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                </li>
+                                <li class="item-list-element">
+                                    <div class="checkbox-label label-result" data-io-label="diamonds">
+                                        <input type="checkbox" name="" id="" class="d-none checkbox checkbox-result">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="me-2">Shape:</span>
+                                    <span>Round</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Disc%:</span>
+                                    <span>5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Price:</span>
+                                    <span>$300</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Carat:</span>
+                                    <span>0.30</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Cut:</span>
+                                    <span>Good</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Color:</span>
+                                    <span>H</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Clarity:</span>
+                                    <span>VS2</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">T%:</span>
+                                    <span>57.5%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">D%:</span>
+                                    <span>64%</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">L/W:</span>
+                                    <span>1.56</span>
+                                </li>
+                                <li class="item-list-element">
+                                    <span class="item-list-element--info">Report:</span>
+                                    <span>IGI</span>
+                                </li>
+                                <li class="item-list-element item-list-element-delete">
+                                    <button type="button" class="btn-delete rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="result__drop-down border-top">
+                                <div class="row">
+                                    <div class="result__drop-down--col col-3">
+                                        <img src="assets/img/2.jpg" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="result__drop-down--col col-7">
+
+                                        <h4 class="h4 py-2">0.30 Carat Pear Lab Diamond</h4>
+
+                                        <h5 class="h5 py-2">$290</h5>
+
+                                        <ul class="list result__info-list">
+
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Carat: 0.30</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Color: H</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Clarity: VS2</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Cut: Good</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Polish: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Symmetry: Excellent</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Table: 57.5%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Depth: 64%</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>L/W: 1.56</span>
+                                            </li>
+                                            <li class="py-3 border-bottom result__info-li">
+                                                <span>Measurements: 5.69 x 3.64 x 2.33</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="acordion">
+                                            <button type="button" class="acordion__btn btn-more--info">
+                                                Additional Details
+                                                <i class="fa fa-chevron-down ms-2" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="acordion__body body-more--info border-top w-100">
+                                                <ul class="list result__drop-list">
+                                                    <li class="result__drop-li">
+                                                        <span>Culet: Pointed</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Gridle: Thick - Very Thick</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Report №: LG1234567</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Fluour: None</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span>Origin: Lab Created</span>
+                                                    </li>
+                                                    <li class="result__drop-li">
+                                                        <span class="d-flex w-100 flex-column">
+                                                            <span>Lab Created Diamond Delivery:</span>
+                                                            <span class="text-nowrap">Monday, March 21</span>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="result__drop-down--col col-2 d-flex flex-column justify-content-center align-items-center">
+                                        <button type="button" class="btn btn-primary-border py-3 w-100 text-capitalize">
+                                            View Diamond
+                                        </button>
+                                        <p class="mt-3 w-100 d-flex justify-content-center">
+                                            <i class="fa fa-heart me-2 text-primary" aria-hidden="true"></i>
+                                            <span>Only One Available</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!-- - end cart - -->
+            </div>
+        </div>
+        <!-- ? end diamond item ? -->
+
+        <!-- Modal Buy start -->
+        <div class="modal fade" id="buy-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="buy-modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border">
+                    <div class="modal-header border-bottom">
+                        <div class="d-flex align-items-end">
+                            <i class="svg-logo logo-icon modal-logo"></i>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- title -->
+                        <h3 class="h3 text-center">Buy Request</h3>
+                        <!-- sub-title -->
+                        <h5 class="h5 text-center">Payment Terms</h5>
+                        <!-- dario terns -->
+                        <div class="d-flex w-100 justify-content-center align-items-center mt-3 modal-label-container">
+                            <div class="mx-2">
+                                <input type="radio" name="buy-terms" id="buy-cod" class="d-none buy-terms-radio">
+                                <label class="circle-radio-label shadow-sm unselectable" for="buy-cod">COD</label>
+                            </div>
+
+                            <div class="mx-2">
+                                <input type="radio" name="buy-terms" id="buy-invoice" class="d-none buy-terms-radio"
+                                    checked>
+                                <label class="circle-radio-label shadow-sm unselectable"
+                                    for="buy-invoice">Invoice</label>
+                            </div>
+
+                            <div class="mx-2">
+                                <input type="radio" name="buy-terms" id="buy-cash-memo" class="d-none buy-terms-radio">
+                                <label class="circle-radio-label shadow-sm unselectable" for="buy-cash-memo">Cash <br>
+                                    Memo</label>
+                            </div>
+
+                        </div>
+                        <!-- inputs -->
+                        <div class="buy-modal-inputs d-flex align-items-center justify-content-center flex-column mt-4">
+                            <div class="input-group d-flex align-items-center justify-content-start w-75 mt-2">
+                                <span class="d-block me-3 w-30">Pay Within</span>
+                                <input type="number" name="" id="" class="small-input" placeholder="30">
+                                <span class="d-block ms-4">Days of Invoice</span>
+                            </div>
+                            <div class="input-group d-flex align-items-center justify-content-center w-75 mt-2">
+                                <span class="d-block me-3 w-30">P/ct Offer</span>
+                                <input type="number" name="" id="" class="form-control" placeholder="$200">
+                            </div>
+                            <div class="input-group d-flex align-items-center justify-content-center w-75 mt-2">
+                                <span class="d-block me-3 w-30">Total Price Offer</span>
+                                <input type="number" name="" id="" class="form-control" placeholder="$20.30">
+                            </div>
+                            <div
+                                class="input-group d-flex flex-column align-items-center justify-content-center w-100 mt-4">
+                                <h5 class="h5">Comments</h5>
+                                <textarea name="" id="" style="resize: none;"
+                                    class="form-control w-100 text-center comment-area"
+                                    placeholder="Click to comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-top">
+                        <button type="button" class="btn btn-primary w-100">Place Your Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Buy end -->
+
+        <!-- Modal Memo start -->
+        <div class="modal fade" id="memo-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="memo-modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border">
+                    <div class="modal-header border-bottom">
+                        <div class="d-flex align-items-end">
+                            <i class="svg-logo logo-icon modal-logo"></i>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- title -->
+                        <h3 class="h3 text-center">Memo Request</h3>
+                        <!-- inputs -->
+                        <div class="buy-modal-inputs d-flex align-items-center justify-content-center flex-column mt-3">
+                            <div
+                                class="input-group d-flex flex-column align-items-center justify-content-center w-100 mt-3">
+                                <h5 class="h5">Comments</h5>
+                                <textarea name="" id="" style="resize: none;"
+                                    class="form-control w-100 text-center comment-area-large"
+                                    placeholder="Click to comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-top">
+                        <button type="submit" class="btn btn-primary w-100">Place Your Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Memo end -->
+
+        <!-- Modal Memo start -->
+        <div class="modal fade" id="hold-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="hold-modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border">
+                    <div class="modal-header border-bottom">
+                        <div class="d-flex align-items-end">
+                            <i class="svg-logo logo-icon modal-logo"></i>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- title -->
+                        <h3 class="h3 text-center">Memo Request</h3>
+                        <!-- sub-title -->
+                        <h5 class="h5 text-center">How Long would you like the diamond <br> to be on hold for you</h5>
+                        <!-- inputs -->
+                        <div class="buy-modal-inputs d-flex align-items-center justify-content-center flex-column mt-3">
+
+                            <div class="hold-hours shadow-sm" id="hours-item">
+
+                                <div class="hold-hours__value unselectable">
+                                    <h3 class="h3" id="hold-hours--title">5</h3>
+                                    <h5 class="h5">Hours</h5>
+                                    <i class="fa fa-angle-down d-block fs-5" aria-hidden="true"></i>
+                                    <input type="hidden" value="6" id="hold-hours--option">
+                                </div>
+
+                                <ul class="hold-hours__values mt-3 unselectable" id="hours-list">
+                                    <li class="hold-hours__select">1</li>
+                                    <li class="hold-hours__select">2</li>
+                                    <li class="hold-hours__select">3</li>
+                                    <li class="hold-hours__select">4</li>
+                                    <li class="hold-hours__select">5</li>
+                                    <li class="hold-hours__select">6</li>
+                                    <li class="hold-hours__select">7</li>
+                                    <li class="hold-hours__select">8</li>
+                                    <li class="hold-hours__select">9</li>
+                                    <li class="hold-hours__select">10</li>
+                                    <li class="hold-hours__select">11</li>
+                                    <li class="hold-hours__select">12</li>
+                                    <li class="hold-hours__select">13</li>
+                                    <li class="hold-hours__select">14</li>
+                                    <li class="hold-hours__select">15</li>
+                                    <li class="hold-hours__select">16</li>
+                                    <li class="hold-hours__select">17</li>
+                                    <li class="hold-hours__select">18</li>
+                                    <li class="hold-hours__select">19</li>
+                                    <li class="hold-hours__select">20</li>
+                                    <li class="hold-hours__select">21</li>
+                                    <li class="hold-hours__select">22</li>
+                                    <li class="hold-hours__select">23</li>
+                                    <li class="hold-hours__select">24</li>
+                                </ul>
+
+                            </div>
+
+                            <p class="mt-3">Click to Change</p>
+
+                            <div
+                                class="input-group d-flex flex-column align-items-center justify-content-center w-100 mt-3">
+                                <h5 class="h5">Comments</h5>
+                                <textarea name="" id="" style="resize: none;"
+                                    class="form-control w-100 text-center comment-area"
+                                    placeholder="Click to comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-top">
+                        <button type="submit" class="btn btn-primary w-100">Place Your Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Memo end -->
+
+        <!-- ? start canvas ?  -->
+        <nav class="canvas shadow container-io py-5 px-4" id="nav-canvas">
+
+            <div class="canvas__out"></div>
+
+            <ul class="canvas__list fs-5">
+                <!-- * dashbord * -->
+                <li class="canvas__li canvas__dashbord border-bottom pb-4">
+                    <div class="canvas__user">
+                        <a href="client-info.html">
+                            <i class="fa fa-user fs-3 text-primary"></i>
+                        </a>
+                    </div>
+                    <span class="canvas__text">Dashbord</span>
+                    <div class="canvas__dashbord--btns">
+                        <a href="#" class="canvas__dashbord--btn"><i class="fa fa-bell" aria-hidden="true"></i></a>
+                        <a href="#" class="canvas__dashbord--btn"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <button type="button" class="exit-canvas burger-trigger" id="exit-canvas"></button>
+                    </div>
+                </li>
+
+                <li class="canvas__li canvas__drop-box">
+                    <div class="d-flex align-items-center w-100 canvas__element canvas__drop-list--trigger">
+                        <i class="fa fa-filter me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Diamonds</span>
+                        <i class="fa fa-angle-down canvas__text " aria-hidden="true"></i>
+                    </div>
+
+                    <ul class="canvas__drop-list canvas__drop-list--target">
+                        <li class="canvas__drop-li canvas__element">
+                            <a href="index.html" class="canvas__link">
+                                <i class="fa fa-diamond me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                                <span class="canvas__text canvas__item">White Diamonds</span>
+                            </a>
+                        </li>
+
+                        <li class="canvas__drop-li canvas__element">
+                            <a href="index.html" class="canvas__link">
+                                <i class="fa fa-diamond me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                                <span class="canvas__text canvas__item">Colored Diamond</span>
+                            </a>
+                        </li>
+
+                        <li class="canvas__drop-li canvas__element">
+                            <a href="index.html" class="canvas__link">
+                                <i class="fa fa-diamond me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                                <span class="canvas__text canvas__item">Melee</span>
+                            </a>
+                        </li>
+
+                        <li class="canvas__drop-li canvas__element">
+                            <a href="index.html" class="canvas__link">
+                                <i class="fa fa-diamond me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                                <span class="canvas__text canvas__item">Other Diamond</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="#" class="canvas__link in-dev-toggler">
+                        <i class="fa fa-magic me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Custom Order</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="#" class="canvas__link in-dev-toggler">
+                        <i class="fa fa-file me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Hold List</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="#" class="canvas__link in-dev-toggler">
+                        <i class="fa fa-credit-card me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Payment Methods</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="client-info.html" class="canvas__link">
+                        <i class="fa fa-book me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Client Information</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="#" class="canvas__link in-dev-toggler">
+                        <i class="fa fa-comments me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Chat</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="#" class="canvas__link in-dev-toggler">
+                        <i class="fa fa-handshake-o me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Sale</span>
+                    </a>
+                </li>
+
+                <li class="canvas__li canvas__element">
+                    <a href="orders.html" class="canvas__link">
+                        <i class="fa fa-book me-3 fs-5 canvas__icon" aria-hidden="true"></i>
+                        <span class="canvas__text canvas__item">Orders</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <!-- ? end canvas ?  -->
+
+        <!-- ? start in development-->
+        <div class="in-dev" id="in-dev">
+            <div class="in-dev__body">
+                <!-- in dev logo svg -->
+                <div class="in-dev__logo">
+                    <img src="assets/img/logo/Second -LaBrilliante Fold type sign L _ B  (Print).svg" alt="logo">
+                </div>
+
+                <!-- in dev text info -->
+                <div class="in-dev__title">
+                    <h2 class="h2">Page in development</h2>
+                </div>
+            </div>
+        </div>
+        <!-- ? end  in development-->
+
+    </div>
+
+    <!-- ! ------ scripts------ ! -->
+
+    <!-- * bootstrap -->
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <!-- * element control -->
+    <script src="assets/js/scripts/element-control.js"></script>
+    <!-- * canvas -->
+    <script src="assets/js/scripts/canvas.js"></script>
+    <!-- * sortable -->
+    <script src="assets/js/node_modules/sortablejs/Sortable.min.js"></script>
+    <!-- * sort -->
+    <script src="assets/js/scripts/sort.js"></script>
+    <!-- * cart -->
+    <script src="assets/js/scripts/cart.js"></script>
+    <!-- * scroll -->
+    <script src="assets/js/scripts/scroll.js"></script>
+    <!-- * in dev -->
+    <script src="assets/js/scripts/in-dev.js"></script>
+
+</body>
+
+</html>

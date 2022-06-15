@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- * favicon -->
+    <link rel="icon" href="assets/img/logo/favicon/favicon.ico" type="image/x-icon">
+    <!-- * fa -->
+    <link rel="stylesheet" href="assets/fonts/fa/css/font-awesome.min.css">
+    <!-- * bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- * styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- * page title -->
+    <title>login</title>
+</head>
+<body>
+    <div class="wrapper h-100 w-100 d-flex align-items-center justify-content-center">
+        <!-- ? register start ? -->
+        <div class="row w-100 h-100 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-xxl-4 col-xl-4 col-lg-6 col-md-7 col-sm-10">
+                <form action="" method="" class="login h-75 border shadow px-0 py-4 rounded d-flex align-items-center justify-content-center flex-column">
+                    <div class="d-flex justify-content-center align-items-center pb-4 border-bottom w-75">
+                        <i class="svg-logo logo-icon modal-logo"></i>
+                    </div>
+                    <!-- header -->
+                    <div class="login__header w-75 py-3 mt-2">
+                        <h4 class="h4 text-center">Registration</h4>
+                    </div>
+        
+                    <!-- login -->
+                    <div class="input-group w-75 mt-4">
+                        <input type="text" name="" id="" class="form-control" placeholder="Create login">
+                    </div>
+        
+                    <!-- email -->
+                    <div class="input-group w-75 mt-4">
+                        <input type="email" name="" id="" class="form-control" placeholder="Enter your email">
+                    </div>
+        
+                    <!-- tel -->
+                    <div class="input-group w-75 mt-4">
+                        <input type="tel" name="" id="" class="form-control" placeholder="Enter your phone number">
+                    </div>
+        
+                    <!-- password -->
+                    <div class="input-group w-75 mt-4">
+                        <input type="password" name="" id="" class="form-control" placeholder="Create password">
+                    </div>
+        
+                    <!-- password repeat -->
+                    <div class="input-group w-75 mt-4">
+                        <input type="password" name="" id="" class="form-control" placeholder="Repeat the password">
+                    </div>
+                    
+                    <!-- элемент для вывода ошибок -->
+                    <div class="text-danger mt-2" id="recaptchaError"></div>
+
+                    <div class="g-recaptcha mt-3 w-75" data-sitekey="6LeVXSYfAAAAAA1qPHjhG3wTOJs5MrE-j2B054jX"></div>
+
+                    <!-- submit -->
+                    <div class="input-group w-75 mt-4 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary w-100">
+                            Register
+                        </button>
+                        <p class="mt-4">Have an account ? <a href="login.html" class="link">Sign in</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- ? register end ? -->
+    </div>
+
+    <!-- ! ------ scripts------ ! -->
+    
+    <!-- * goggle captcha -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+</html>
