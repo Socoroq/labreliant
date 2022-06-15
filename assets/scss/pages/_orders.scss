@@ -1,0 +1,130 @@
+.orders {
+    width: 100%;
+    height: 70vh;
+
+    // @ ------------------------------------------ orders Search
+
+    &__search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__search-btn {
+        height: 30px;
+        padding: 0;
+        width: 120px;
+        background-color: $dark;
+        color: $white;
+        border-radius: 2px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $primary;
+        }
+    }
+
+    // @ ------------------------------------------ orders Items
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    // @ ------------------------------------------ order item
+
+    &__item {
+        width: 100%;
+        border: 1px solid $lite;
+        border-radius: 3px;
+        margin-bottom: 10px;
+
+        & .item-list-element--info {
+            display: none;
+        }
+    }
+
+    // @ ------------------------------------------ item header
+
+    &__item-header {
+        display: flex;
+    }
+
+    // @ ------------------------------------------ item header list
+
+    &__item-header-list {
+        display: flex;
+        align-items: center;
+    }
+
+    // @ ------------------------------------------ # number of item
+
+    &__item-header-number {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        flex: 1 1 auto;
+    }
+
+    // @ ------------------------------------------ item header list element
+
+    &__item-header-element {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin-right: 20px;
+        @include adaptive-value("font-size", 14, 12, 0);
+    }
+
+    // @ ------------------------------------------ item value
+
+    &__item--value {
+        margin-left: 5px;
+    }
+
+    // @ ------------------------------------------ date item
+
+    &__item--date {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        & .orders__item--value {
+            margin: 0;
+            margin-top: 5px;
+        }
+    }
+
+    // @ ------------------------------------------ memo, hold, invoice
+
+    &__item--more {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 30px;
+    }
+
+    // @ ------------------------------------------ item footer
+
+    &__item-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // @ ------------------------------------------ Viev details items
+
+    &__diamond-items {
+        height: auto !important;
+        max-height: 0;
+        border-top: 1px solid $none !important;
+        transition: max-height 0.2s ease, border-color 0.2s ease, padding 0.2s ease;
+
+        &.active {
+            max-height: 500px;
+            border-top: 1px solid $grey-lite !important;
+        }
+    }
+
+}

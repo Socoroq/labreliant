@@ -1,0 +1,40 @@
+// white , lite
+$white: #fff;
+// $lite: #f4f4f4;
+$lite: #ebebeb;
+// grey , grey-lite
+$grey: #cccccc;
+$grey-lite: #d4dbda;
+// dark , shadow, none
+$dark: #3c3f3f;
+$dark-hard: #2a2c2c;
+$dark-shadow: #3c3f3f1e;
+$none: #22222200;
+$dark-op: #2a2b2bc1;
+// primary, secondary
+$primary: #5DC2AA;
+$primary-lite: #5dc2aa3f;
+$secondary: #55b49e;
+// danger
+$danger: #e44f5b;
+$danger2: #e03d4b;
+
+
+.hidden {
+    opacity: 0 !important;
+}
+.io-bg-dark {
+    background-color: $dark;
+}
+.text-primary {
+    color: $primary !important;
+}
+.text-none {
+    opacity: 0;
+}
+.text-secondary {
+    color: $secondary !important;
+}
+.bg-none {
+    background-color: $none;
+}

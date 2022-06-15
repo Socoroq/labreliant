@@ -1,0 +1,280 @@
+// @ ------------------------------------------ card-items
+.result, .recently, .comparation, .best, .cart {
+    height: auto;
+    padding-bottom: 10px !important;
+    &__items {
+       height: 70vh !important;
+       overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: $grey;
+            }
+        &::-webkit-scrollbar-thumb {
+            background-color: $primary;
+        }
+        padding-right: 0px !important;
+        border: 1px solid $grey-lite !important;
+        overscroll-behavior: none !important;
+        overscroll-behavior-y: none !important;
+    }
+    &__item {
+        height: auto;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:nth-child(odd) {
+            background-color: $lite;
+        }
+        &:nth-child(even) {
+            background-color: $white;
+        }
+        &:hover {
+            background-color: $primary;
+            & .checkbox-label {
+                border-color: $dark;
+            }
+            & .checkbox-label.active {
+                background-color: $dark;
+                border-color: $dark;
+                color: $white;
+            }
+            & .btn-delete {
+                background-color: $dark;
+                color: $white;
+                border: none !important;
+            }
+        }
+    }
+    &__item-list {
+        transition: background-color 0.3s ease;
+        & .fa-chevron-down {
+            transition: transform 0.3s ease;
+        }
+    }
+    &__item.active {
+        background-color: $primary;
+        transition: background-color 0.3s ease;
+        & .checkbox {
+            &:checked {
+                & + label {
+                    background-color: $none;
+                    color: $dark;
+                    border-color: $dark;
+                }
+            }
+        }
+        & label.checkbox-label {
+            background-color: $none;
+            border-color: $dark;
+            color: $none;
+        }
+        & .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+    }
+    &__drop-down {
+        height: auto;
+        max-height: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        overflow: hidden;
+        cursor: default;
+        &:nth-child(odd) {
+            background-color: $lite;
+        }
+        &:nth-child(even) {
+            background-color: $white;
+        }
+        padding: 0 15px;
+    }
+    &__drop-down.active {
+        max-height: 600px;
+        padding: 15px 15px;
+        border-bottom: 1px solid $grey;
+    }
+    &__info-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__info-li {
+        flex: 1 1 33.333%;
+        display: flex;
+        align-items: center;
+    }
+    &__drop-list {
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        & li {
+            flex: 1 1 33.333%;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid $grey;
+            & span {
+                flex: 1 1 33.333%;
+            }
+        }
+    }
+    & .item-list-element--info {
+        display: none;
+    }
+}
+
+// @ ------------------------------------------ body more info
+.acordion {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    &__btn {
+        height: 50px;
+        background-color: $none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & i {
+            transition: transform 0.3s ease;
+            margin-left: 10px;
+        }
+    }
+    &__btn.active {
+        & i {
+            transform: rotate(180deg);
+        }
+    }
+    &__body {
+        width: 100% !important;
+        height: auto;
+        overflow: hidden;
+        max-height: 0;
+        padding: 0;
+        opacity: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    }
+    &__body.active {
+        height: auto;
+        overflow: hidden;
+        max-height: 1000px !important;
+        padding: 10px 0;
+        opacity: 1;
+    }
+}
+.btn-more--info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s linear, background-color 0.3s linear;
+    position: relative;
+    &::before {
+        width: 0;
+        height: 1px;
+        background-color: $primary;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease, width 0.3s ease;
+    }
+    &:hover {
+        color: $secondary;
+        &::before {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+}
+.btn-more--info.active {
+    color: $primary;
+    &::before {
+        width: 100%;
+        opacity: 1;
+    }
+}
+.body-more--info {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.2s linear, max-height 0.2s linear, padding 0.2s linear;
+    & li {
+        height: 60px !important;
+    }
+}
+.body-more--info.active {
+    max-height: 250px !important;
+    transition: max-height 0.3s ease;
+    min-height: fit-content !important;
+    opacity: 1;
+}
+.shape-text-info {
+    display: none;
+}
+
+.content-nav {
+    border-radius: 3px;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    & .input-group {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        &:last-child {
+            justify-content: flex-end;
+            & .btn {
+                border-radius: 3px !important;
+                margin-left: 10px !important;
+            }
+        }
+        & .btn {
+            border-radius: 0 !important;
+        }
+    }
+}
+.content-name {
+    background-color: $dark;
+    display: flex;
+    align-items: center;
+}
+.item-list {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    & li {
+        width: 7.6%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.3s ease;
+
+    }
+}
+.item-list-name {
+    @extend .item-list;
+    & li {
+        color: $white;
+        width: 7.6%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.3s ease;
+        cursor: pointer;
+        &:hover {
+            color: $primary
+        }
+        & i {margin-left: 5px}
+    }
+}
+.content {
+    padding-right: 10px;
+    border-radius: 0 0 4px 4px;
+}
+.content-buttons {
+    background-color: $dark;
+}

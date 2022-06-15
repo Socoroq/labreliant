@@ -1,0 +1,40 @@
+// ? ---------- slider range ----------- ? //
+.slider-round {
+    margin-top: 8px;
+    height: 6px;
+    border: none;
+    background-color: $grey-lite;
+    cursor: pointer;
+}
+.slider-round .noUi-connect {
+    background: $primary;
+}
+.slider-round .noUi-handle {
+    height: 18px;
+    width: 18px;
+    top: -6.5px;
+    right: -9px;
+    border-radius: 9px;
+}
+.noUi-tooltip {
+    display: none;
+}
+.noUi-handle  {
+    cursor: pointer;
+    border: 1px solid $secondary;
+    background-color: $secondary;
+    box-shadow: 0 0 5px $dark-shadow;
+    transition: border-color 0.3s ease;
+    &::before, &::after {
+        display: none;
+    }
+    &:hover, &:focus {
+        border: 1px solid $secondary;
+    }
+}
+.noUi-marker {
+    display: none;
+}
+.mt-io-shape {
+    margin-top: 6px;
+}

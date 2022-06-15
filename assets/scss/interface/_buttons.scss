@@ -1,0 +1,227 @@
+// @ ------------------------------------------ btns
+.btn-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 20px;
+    background-color: $none !important;
+    & span {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $dark;
+    }
+}
+.exit-canvas {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background-color: $none;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        width: 80%;
+        height: 1px;
+        background-color: $white;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+.btn {
+    box-shadow: 0 0 0 !important;
+    border: 1px solid $dark;
+    border-radius: 2px !important;
+    &:hover {
+        border: 1px solid $dark !important;
+        box-shadow:  0 0 0 !important;
+    }
+}
+.link {
+    color: $primary;
+    transition: color 0.3s ease;
+    &:hover {
+        color: $secondary;
+    }
+}
+.btn-link {
+    border: 0 !important;
+    background-color: $none !important;
+    text-decoration: none;
+    color: $dark;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    &:hover {
+        border: 0 !important;
+        background-color: $none !important;
+        text-decoration: none;
+        color: $primary;
+    }
+}
+.btn-primary {
+    background-color: $primary;
+    border: 1px solid $primary;
+    @include adaptive-value("font-size", 14, 13, 0);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    &:hover, &:focus {
+        background-color: $secondary !important;
+        border: 1px solid $secondary !important;
+    }
+}
+.btn-primary.active {
+    background-color: $secondary;
+    border-color: $none !important;
+}
+.btn-primary-border {
+    border: 1px solid $primary !important;
+    border-radius: 3px;
+    color: $secondary;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    &:hover {
+        border: 1px solid $primary !important;
+        background-color: $primary;
+        color: $white;
+    }
+}
+.btn-primary-border.active {
+    border: 1px solid $primary !important;
+    border-radius: 3px;
+    color: $white;
+    background-color: $primary;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    &:hover {
+        border: 1px solid $primary !important;
+        background-color: $secondary;
+        color: $white;
+    }
+}
+.btn-secondary {
+    background-color: $dark;
+    border: 1px solid $dark;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    &:hover {
+        border: 1px solid $secondary !important;
+        background-color: $secondary;
+    }
+}
+.btn-secondary.active {
+    background-color: $secondary;
+    border: 1px solid $secondary;
+    &:hover, &:focus {
+        border: 1px solid $primary !important;
+        background-color: $primary;
+    }
+}
+.rounded-none {
+    border-radius: 0 !important;
+}
+.btn-edit {
+    width: 150px;
+    min-width: fit-content;
+    padding: 0 10px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-edit.active {
+    background-color: $dark;
+}
+#save-client-info {
+    background-color: $primary;
+    border-color: $primary;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    &:hover {
+        background-color: $secondary;
+    }
+}
+#save-client-info.active {
+    opacity: 1;
+}
+.btn-danger {
+    border: 1px solid $danger;
+    background-color: $danger;
+    transition: background-color 0.3s ease;
+    &:hover {
+        opacity: 0.9;
+        border: 1px solid $danger !important;
+        outline: none;
+        background-color: $danger2;
+    }
+}
+.btn-delete {
+    width: 34px;
+    height: 34px;
+    border: none !important;
+    background-color: $danger;
+    color: $white;
+}
+.buy-terms-radio {
+    &:checked {
+        & + label {
+            width: 68px;
+            height: 68px;
+            background-color: $dark;
+        }
+    }
+}
+.circle-radio-label {
+    width: 60px;
+    height: 60px;
+    background-color: $primary;
+    border-radius: 50%;
+    transition: width 0.2s linear, height 0.2s linear, background-color 0.2s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+    cursor: pointer;
+    &:hover {
+        background-color: $secondary;
+    }
+}
+.exit-btn {
+    width: 24px;
+    height: 24px;
+    background-color: $none;
+    &::before, &::after {
+        width: 24px;
+        height: 1px;
+        content: "";
+        position: absolute;
+        background-color: $dark;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+#filter-more-btn {
+    & i {
+        transition: transform 0.3s ease;
+    }
+}
+#filter-more-btn.active {
+    & i {
+        transform: rotate(180deg);
+    }
+}
+.btn-sort {
+    display: none;
+    background-color: $primary;
+    color: $white;
+    border-radius: 2px;
+    & i {
+        margin: 0 2px;
+    }
+}

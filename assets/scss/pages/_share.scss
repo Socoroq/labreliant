@@ -1,0 +1,18 @@
+.share {
+    overflow: hidden;
+    &__items {
+        min-height: 90vh !important;
+        max-height: 90vh !important;
+        & .item-list-element--info {display: none !important;}
+    }
+
+    & .item-list-name {
+        cursor: default !important;
+        color: $white !important;
+        & li {
+            &:hover {
+                color: $white !important;
+            }
+        }
+    }
+}

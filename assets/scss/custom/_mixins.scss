@@ -1,0 +1,41 @@
+//? ADAPTIVE VALUE
+$maxWidth: 1620;
+$maxWidthContainer: 1300;
+@mixin adaptive-value($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+    @if $type == 1 {
+        #{$property}: $startSize + px;
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+        }
+    } @else if $type == 2 {
+        #{$property}: $starSize + px;
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$roperty}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+        }
+    } @else {
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+        }
+    }
+
+//? BRAKE POINTS ----------------------------
+//* Large desktops and laptops --------------
+@mixin BP1199 {
+    @media (max-width: 1199px) { @content; }
+}
+//* Portrait tablets and medium desktop -----
+@mixin BP991 {
+    @media (max-width: 991px) { @content; }
+}
+//* Portrait tablets and small desktops -----
+@mixin BP768 {
+    @media (max-width: 768px) { @content; }
+}
+//* Landscape phones and portrait tablets ---
+@mixin BP767 {
+    @media (max-width: 767px) { @content; }
+}
+//* Landscape phones and smaller ------------
+@mixin BP480 {
+    @media (max-width: 480px) { @content; }
+}

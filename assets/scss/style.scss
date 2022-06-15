@@ -1,0 +1,107 @@
+// ! ------------------------------------------ import layouts
+@import "custom/_fonts";
+@import "custom/_mixins";
+@import "custom/_colors";
+@import "custom/_reset";
+@import "custom/_animations";
+
+// ! ------------------------------------------ import interface
+@import "interface/_buttons";
+@import "interface/_canvas";
+@import "interface/_diamond-icon";
+@import "interface/_diamond-items";
+@import "interface/_form-control";
+@import "interface/_header";
+@import "interface/_noUISlider";
+
+// ! ------------------------------------------ import pages
+@import "pages/_cart";
+@import "pages/_client-info";
+@import "pages/_filter";
+@import "pages/_orders";
+@import "pages/_share";
+
+
+// @ ------------------------------------------ basic
+body {
+    font-family: 'BrandonGrotesque';
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: $grey;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+    }
+}
+.wrapper {
+    margin: 0 auto;
+    height: 100vh;
+    width: 90vw;
+    padding: 60px 0 20px 0;
+    min-height: fit-content;
+}
+
+// @ ------------------------------------------ width
+.w-30 {
+    width: 30%;
+}
+.w-fit {
+    width: fit-content;
+}
+
+// @ ------------------------------------------ in development modal
+.in-dev {
+    opacity: 0;
+    transform: translateX(-200%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: $dark-op;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+
+    transition: opacity 0.3s ease, transform 0s 0.3s ease;
+
+    &__body {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    &__logo {
+        width: 300px;
+        animation: knock 0.6s ease-in;
+    }
+    &__title {
+        color: $white;
+    }
+
+    & .exit-btn {
+        position: absolute;
+        right: 20%;
+        top: 25%;
+        &::before, &::after {
+            background-color: $white;
+        }
+    }
+}
+.in-dev.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0s, opacity 0.3s ease;
+}
+// @ ------------------------------------------ login + register + validation
+.login {
+    width: 100%;
+}
+
+// ! ------------------------------------------ import media
+@import "_media";

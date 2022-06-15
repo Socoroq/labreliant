@@ -1,0 +1,66 @@
+// ? ---------- filter ---------- ? //
+.filter-info {
+    width: 100px;
+    display: flex;
+}
+.filter-item {
+    width: calc(100% - 90px);
+}
+.filter-info-shape {
+    @extend .filter-info;
+}
+.filter-item-shape {
+    @extend .filter-item;
+}
+.filter-col {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#filter-2 {
+    opacity: 0;
+    height: auto;
+    max-height: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    padding: 0;
+    overflow: hidden;
+}
+#filter-2.active {
+    padding-top: 40px;
+    max-height: 1000px;
+    opacity: 1;
+}
+// ? params filter panel ? //
+.params-filter--item{
+    & i {
+        transition: transform 0.3s ease;
+    }
+}
+.params-filter--item.active {
+    color: $primary;
+    & i {
+        transform: rotate(180deg);
+    }
+}
+.params-filter--comp, .params-filter--rec {
+    @extend .params-filter--item;
+}
+.params-filter--comp.active, .params-filter--rec.active {
+    @extend .params-filter--item.active;
+}
+.filter-info-text {
+    display: none;
+}
+.params-filter--sort {
+
+}
+.params-filter--sort.active-1 {
+    color:  $primary !important;
+}
+.params-filter--sort.active-2 {
+    color:  $primary !important;
+    & i {
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,92 @@
+// * ---------- Client Information ---------- * //
+.client-wrapper {
+    margin-left: 7% !important;
+    margin-top: 40px !important;
+    padding-top: 100px;
+    & .header {
+        left: 2.2%;
+        width: 100%;
+        padding-left: 6.5% !important;
+        padding-right: 7.5% !important;
+    }
+}
+.change-password-item {
+    height: auto;
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+.change-password-item.active {
+    height: auto;
+    opacity: 1;
+    max-height: 500px !important;
+}
+.client-info__input-group--name {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    & i {
+        margin-left: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease, color 0.3s ease;
+        color: $dark;
+    }
+}
+.client-info__input-group--name.active {
+    & i {
+        margin-left: 10px;
+        opacity: 1;
+        color: $primary;
+    }
+}
+.client-info-manager {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    & i {
+        transform: rotate(0);
+        transition: transform 0.3s ease;
+    }
+    &:hover {
+        color: $primary;
+    }
+}
+.client-info-manager.active {
+    color: $primary;
+    & i {
+        transform: rotate(180deg);
+    }
+}
+.client-info-managed {
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.client-info-managed.active {
+    height: auto;
+    max-height: 1000px !important;
+    min-height: fit-content !important;
+}
+#save-changes, #change-password {
+    background-color: $primary;
+    border-color: $primary;
+    opacity: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    height: auto;
+    max-height: 0;
+}
+#save-changes.active, #change-password.active {
+    opacity: 1;
+    max-height: 500px;
+}
+#change-password, #change-password.active {
+    background-color: $dark;
+    border-color: $dark;
+    &:hover, &:focus {
+        border-color: $dark !important;
+    }
+}
+.client-info-content {
+    min-height: fit-content !important;
+}

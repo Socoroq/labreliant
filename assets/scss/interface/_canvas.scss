@@ -1,0 +1,181 @@
+.canvas {
+    width: 80px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: $dark;
+    color: $white;
+    overflow: hidden;
+    transition: width 0.3s 0.2s ease;
+    z-index: 10;
+    // canvas hover
+    &:hover, &.active {
+        transition: width 0.3s 0s ease;
+        width: 300px;
+        & .canvas__text {
+            transition: opacity 0.3s 0.2s ease;
+            opacity: 1;
+        }
+        // dashbord hover
+        & .canvas__dashbord {
+            & .canvas__text {
+                opacity: 1;
+                transition: opacity 0.3s 0.2s ease;
+            }
+        }
+        & .canvas__dashbord--btns {
+            display: flex;
+            opacity: 1;
+            transition: opacity 0.3s 0.2s ease;
+        }
+        & .canvas__drop-list.active {
+            max-height: 400px;
+            opacity: 1;
+        }
+    }
+
+    // dashbord
+    &__dashbord {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .canvas__text {
+            display: flex;
+            flex: 1 1 auto;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+    }
+    &__dashbord--btns {
+        display: flex;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+    &__dashbord--btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        color: $primary;
+        transition: color 0.3s ease;
+        &:hover {
+            color: $secondary;
+        }
+    }
+    &__dashbord--img {
+        width: 38px;
+        height: 38px;
+    }
+    
+    // list / li
+    &__li {
+        width: 100%;
+        height: 34px !important;
+        display: flex;
+        align-items: center;
+        margin-top: 14px !important;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        height: 100%;
+        flex: 1 1 auto;
+        &:hover, &:focus {
+            color: $white;
+        }
+    }
+
+    // icons / text
+    &__icon {
+        min-width: 34px;
+        width: 34px;
+        height: 34px;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        transition: border-radius 0.3s ease;
+        opacity: 1;
+    }
+    &__text {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+    &__item {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    &__element {
+        height: fit-content;
+        border-radius: 3px;
+        padding-right: 10px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        overflow: hidden;
+        &:hover {
+            background-color: $dark-hard;
+            & .canvas__icon {
+                border-radius: 4px 0 0 4px;
+            }
+        }
+    }
+    &__user {
+        background-color: $white;
+        width: 36px !important;
+        min-width: 36px !important;
+        height: 36px !important;
+        min-height: 36px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    // drop
+    &__drop-box {
+        height: fit-content !important;
+        overflow: hidden;
+        display: flex;
+        align-items: center !important;
+        flex-direction: column;
+        transition: max-height 0.3s ease;
+    }
+    &__drop-list {
+        width: 100%;
+        padding-left: 20px;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+    }
+    &__drop-li {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    & .canvas__out {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: -100vw;
+        top: 0;
+    }
+    & .canvas__out.active {
+        left: 300px;
+    }
+}
